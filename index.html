@@ -4,25 +4,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
-    <title>Freebie 64 - Portfolio (Tailwind CSS) by pixelcave</title>
+    <title>Elaine Qu | Portfolio</title>
 
     <meta
       name="description"
-      content="Freebie 64 - Portfolio (Tailwind CSS). Check out more."
+      content="Portfolio of Elaine Qu, a Cornell Engineering student in Information Science, Systems, and Technology."
     />
-    <meta name="author" content="pixelcave" />
+    <meta name="author" content="Elaine Qu" />
 
-    <!-- Icons -->
+    <!-- Icon -->
     <link
       rel="icon"
-      href="https://cdn.pixelcave.com/favicon.svg"
-      sizes="any"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%237e22ce'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='18' font-weight='700' fill='white' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E"
       type="image/svg+xml"
-    />
-    <link
-      rel="icon"
-      href="https://cdn.pixelcave.com/favicon.png"
-      type="image/png"
     />
 
     <!-- Inter web font from bunny.net (GDPR compliant) -->
@@ -32,7 +26,7 @@
       rel="stylesheet"
     />
 
-    <!-- Tailwind CSS Play CDN (mostly for development/testing purposes) -->
+    <!-- Tailwind CSS Play CDN -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
     <!-- Tailwind CSS v4 Configuration -->
@@ -53,7 +47,7 @@
       src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
 
-    <!-- Alpine.js (x-cloak - https://alpinejs.dev/directives/cloak) -->
+    <!-- Alpine.js (x-cloak) -->
     <style>
       [x-cloak] {
         display: none !important;
@@ -91,10 +85,10 @@
           <div class="flex items-center gap-2">
             <!-- Logo -->
             <a
-              href="javascript:void(0)"
+              href="#"
               class="text-2xl font-thin tracking-widest hover:text-purple-600 active:opacity-75 dark:hover:text-purple-400"
             >
-              Olivia
+              Elaine
             </a>
             <!-- END Logo -->
 
@@ -102,6 +96,7 @@
             <button
               x-on:click="toggleDarkMode()"
               type="button"
+              aria-label="Toggle dark mode"
               class="relative inline-flex size-9 items-center justify-center text-zinc-600 hover:opacity-75 dark:text-zinc-400"
             >
               <div
@@ -172,7 +167,7 @@
                 href="#contact"
                 class="text-sm font-medium decoration-purple-600 decoration-2 underline-offset-8 hover:text-black hover:underline dark:decoration-purple-400 dark:hover:text-white"
               >
-                Hire me
+                Contact
               </a>
             </nav>
             <!-- END Nav -->
@@ -186,7 +181,7 @@
           <div class="col-span-1 md:col-span-5">
             <img
               src="assets/photo.jpg"
-              alt="Photo"
+              alt="Photo of Elaine"
               class="rounded-xl object-cover w-full aspect-square"
             />
           </div>
@@ -210,230 +205,79 @@
             ></div>
             <div class="relative mt-auto">
               <h1 class="text-4xl font-medium text-black dark:text-white">
-                Hi there, I'm Olivia!
+                Hi there, I'm Elaine!
               </h1>
-              <h2 class="mt-3 leading-relaxed text-zinc-900 dark:text-zinc-200">
-                I'm a passionate graphic designer with 5+ years of experience
-                creating beautiful and functional designs. I specialize in
-                branding, web design, and print media that tells your story and
-                connects with your audience.
-              </h2>
+              <p class="mt-3 leading-relaxed text-zinc-900 dark:text-zinc-200">
+                I'm a Cornell Engineering student studying Information Science, Systems, and Technology. I design everything from drone hardware in CAD to social media graphics for my church, and I'm currently learning UI design in Figma. I love building things that make someone's day a little easier and everyday tasks simpler. Outside of digital design, I continue my art by choreographing and performing with Impact Dance Troupe at Cornell.
+              </p>
             </div>
           </div>
           <!-- END Intro -->
 
           <!-- Projects -->
-          <a
+          <div
             id="projects"
-            href="javascript:void(0)"
-            class="group relative col-span-1 overflow-hidden rounded-xl bg-zinc-100 p-6 hover:bg-zinc-200/75 active:bg-zinc-200 md:col-span-4 dark:bg-zinc-900 dark:hover:bg-zinc-800/75 dark:active:bg-zinc-800"
+            class="col-span-1 overflow-hidden rounded-xl bg-zinc-100 p-6 md:col-span-4 dark:bg-zinc-900"
           >
-            <div
-              class="absolute top-6 right-6 scale-0 opacity-0 transition duration-75 ease-out group-hover:scale-100 group-hover:opacity-100"
-              aria-hidden="true"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="hi-solid hi-arrow-small-right inline-block size-6"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M3.75 12a.75.75 0 0 1 .75-.75h13.19l-5.47-5.47a.75.75 0 0 1 1.06-1.06l6.75 6.75a.75.75 0 0 1 0 1.06l-6.75 6.75a.75.75 0 1 1-1.06-1.06l5.47-5.47H4.5a.75.75 0 0 1-.75-.75Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </div>
             <h3 class="text-lg font-medium text-zinc-950 dark:text-zinc-50">
-              Abstract set
+              Rotating LiDAR Mount
             </h3>
-            <h4 class="text-sm text-zinc-600 dark:text-zinc-400">This month</h4>
-            <div
-              class="mt-10 transition duration-150 ease-out group-hover:scale-105"
-            >
+            <h4 class="text-sm text-zinc-600 dark:text-zinc-400">
+              Cornell Unmanned Air Systems
+            </h4>
+            <p class="mt-3 text-sm leading-relaxed text-zinc-700 dark:text-zinc-300">
+              Designed a mount that spins a LiDAR sensor on our drone, from motor selection and a belt drive system to a Critical Design Review.
+            </p>
+            <div class="mt-6">
               <img
-                src="assets/project1.png"
-                alt="Project 1"
+                src="assets/lidar-mount.png"
+                alt="CAD render of the rotating LiDAR mount"
                 class="rounded-xl object-contain w-full aspect-square"
               />
             </div>
-          </a>
-          <a
-            href="javascript:void(0)"
-            class="group relative col-span-1 overflow-hidden rounded-xl bg-zinc-100 p-6 hover:bg-zinc-200/75 active:bg-zinc-200 md:col-span-4 dark:bg-zinc-900 dark:hover:bg-zinc-800/75 dark:active:bg-zinc-800"
+          </div>
+
+          <div
+            class="col-span-1 overflow-hidden rounded-xl bg-zinc-100 p-6 md:col-span-4 dark:bg-zinc-900"
           >
-            <div
-              class="absolute top-6 right-6 scale-0 opacity-0 transition duration-75 ease-out group-hover:scale-100 group-hover:opacity-100"
-              aria-hidden="true"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="hi-solid hi-arrow-small-right inline-block size-6"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M3.75 12a.75.75 0 0 1 .75-.75h13.19l-5.47-5.47a.75.75 0 0 1 1.06-1.06l6.75 6.75a.75.75 0 0 1 0 1.06l-6.75 6.75a.75.75 0 1 1-1.06-1.06l5.47-5.47H4.5a.75.75 0 0 1-.75-.75Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </div>
             <h3 class="text-lg font-medium text-zinc-950 dark:text-zinc-50">
-              Illustration
+              Social Media Graphics
             </h3>
-            <h4 class="text-sm text-zinc-600 dark:text-zinc-400">This month</h4>
-            <div
-              class="mt-10 transition duration-150 ease-out group-hover:scale-105"
-            >
+            <h4 class="text-sm text-zinc-600 dark:text-zinc-400">
+              Bethel Grove
+            </h4>
+            <p class="mt-3 text-sm leading-relaxed text-zinc-700 dark:text-zinc-300">
+              Graphics promoting weekly services and campus events on Instagram and Facebook.
+            </p>
+            <div class="mt-6">
               <img
-                src="assets/project2.png"
-                alt="Project 2"
+                src="assets/bethel-grove.png"
+                alt="Social media graphic for a Bethel Grove event"
                 class="rounded-xl object-contain w-full aspect-square"
               />
             </div>
-          </a>
-          <a
-            href="javascript:void(0)"
-            class="group relative col-span-1 overflow-hidden rounded-xl bg-zinc-100 p-6 hover:bg-zinc-200/75 active:bg-zinc-200 md:col-span-4 dark:bg-zinc-900 dark:hover:bg-zinc-800/75 dark:active:bg-zinc-800"
+          </div>
+
+          <div
+            class="col-span-1 overflow-hidden rounded-xl bg-zinc-100 p-6 md:col-span-4 dark:bg-zinc-900"
           >
-            <div
-              class="absolute top-6 right-6 scale-0 opacity-0 transition duration-75 ease-out group-hover:scale-100 group-hover:opacity-100"
-              aria-hidden="true"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="hi-solid hi-arrow-small-right inline-block size-6"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M3.75 12a.75.75 0 0 1 .75-.75h13.19l-5.47-5.47a.75.75 0 0 1 1.06-1.06l6.75 6.75a.75.75 0 0 1 0 1.06l-6.75 6.75a.75.75 0 1 1-1.06-1.06l5.47-5.47H4.5a.75.75 0 0 1-.75-.75Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </div>
             <h3 class="text-lg font-medium text-zinc-950 dark:text-zinc-50">
-              Graphic pack
+              App Screen Redesign
             </h3>
-            <h4 class="text-sm text-zinc-600 dark:text-zinc-400">This month</h4>
-            <div
-              class="mt-10 transition duration-150 ease-out group-hover:scale-105"
-            >
+            <h4 class="text-sm text-zinc-600 dark:text-zinc-400">
+              Figma, in progress
+            </h4>
+            <p class="mt-3 text-sm leading-relaxed text-zinc-700 dark:text-zinc-300">
+              Redesigning a screen from an app I find clunky to make the main task faster and clearer.
+            </p>
+            <div class="mt-6">
               <img
-                src="assets/project3.png"
-                alt="Project 3"
+                src="assets/figma-redesign.png"
+                alt="Figma redesign of an app screen"
                 class="rounded-xl object-contain w-full aspect-square"
               />
             </div>
-          </a>
-          <a
-            href="javascript:void(0)"
-            class="group relative col-span-1 overflow-hidden rounded-xl bg-zinc-100 p-6 hover:bg-zinc-200/75 active:bg-zinc-200 md:col-span-4 dark:bg-zinc-900 dark:hover:bg-zinc-800/75 dark:active:bg-zinc-800"
-          >
-            <div
-              class="absolute top-6 right-6 scale-0 opacity-0 transition duration-75 ease-out group-hover:scale-100 group-hover:opacity-100"
-              aria-hidden="true"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="hi-solid hi-arrow-small-right inline-block size-6"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M3.75 12a.75.75 0 0 1 .75-.75h13.19l-5.47-5.47a.75.75 0 0 1 1.06-1.06l6.75 6.75a.75.75 0 0 1 0 1.06l-6.75 6.75a.75.75 0 1 1-1.06-1.06l5.47-5.47H4.5a.75.75 0 0 1-.75-.75Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </div>
-            <h3 class="text-lg font-medium text-zinc-950 dark:text-zinc-50">
-              Brand identity
-            </h3>
-            <h4 class="text-sm text-zinc-600 dark:text-zinc-400">Last month</h4>
-            <div
-              class="mt-10 transition duration-150 ease-out group-hover:scale-105"
-            >
-              <img
-                src="assets/project4.png"
-                alt="Project 4"
-                class="rounded-xl object-contain w-full aspect-square"
-              />
-            </div>
-          </a>
-          <a
-            href="javascript:void(0)"
-            class="group relative col-span-1 overflow-hidden rounded-xl bg-zinc-100 p-6 hover:bg-zinc-200/75 active:bg-zinc-200 md:col-span-4 dark:bg-zinc-900 dark:hover:bg-zinc-800/75 dark:active:bg-zinc-800"
-          >
-            <div
-              class="absolute top-6 right-6 scale-0 opacity-0 transition duration-75 ease-out group-hover:scale-100 group-hover:opacity-100"
-              aria-hidden="true"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="hi-solid hi-arrow-small-right inline-block size-6"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M3.75 12a.75.75 0 0 1 .75-.75h13.19l-5.47-5.47a.75.75 0 0 1 1.06-1.06l6.75 6.75a.75.75 0 0 1 0 1.06l-6.75 6.75a.75.75 0 1 1-1.06-1.06l5.47-5.47H4.5a.75.75 0 0 1-.75-.75Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </div>
-            <h3 class="text-lg font-medium text-zinc-950 dark:text-zinc-50">
-              Illustration Builder
-            </h3>
-            <h4 class="text-sm text-zinc-600 dark:text-zinc-400">Last month</h4>
-            <div
-              class="mt-10 transition duration-150 ease-out group-hover:scale-105"
-            >
-              <img
-                src="assets/project5.png"
-                alt="Project 5"
-                class="rounded-xl object-contain w-full aspect-square"
-              />
-            </div>
-          </a>
-          <a
-            href="javascript:void(0)"
-            class="group relative col-span-1 overflow-hidden rounded-xl bg-zinc-100 p-6 hover:bg-zinc-200/75 active:bg-zinc-200 md:col-span-4 dark:bg-zinc-900 dark:hover:bg-zinc-800/75 dark:active:bg-zinc-800"
-          >
-            <div
-              class="absolute top-6 right-6 scale-0 opacity-0 transition duration-75 ease-out group-hover:scale-100 group-hover:opacity-100"
-              aria-hidden="true"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="hi-solid hi-arrow-small-right inline-block size-6"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M3.75 12a.75.75 0 0 1 .75-.75h13.19l-5.47-5.47a.75.75 0 0 1 1.06-1.06l6.75 6.75a.75.75 0 0 1 0 1.06l-6.75 6.75a.75.75 0 1 1-1.06-1.06l5.47-5.47H4.5a.75.75 0 0 1-.75-.75Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </div>
-            <h3 class="text-lg font-medium text-zinc-950 dark:text-zinc-50">
-              Logo design
-            </h3>
-            <h4 class="text-sm text-zinc-600 dark:text-zinc-400">Last month</h4>
-            <div
-              class="mt-10 transition duration-150 ease-out group-hover:scale-105"
-            >
-              <img
-                src="assets/project6.png"
-                alt="Project 6"
-                class="rounded-xl object-contain w-full aspect-square"
-              />
-            </div>
-          </a>
+          </div>
           <!-- END Projects -->
 
           <!-- Contact -->
@@ -457,53 +301,28 @@
               aria-hidden="true"
               class="absolute inset-0 bg-purple-100/50 backdrop-blur-md dark:bg-purple-900/75"
             ></div>
-            <div class="relative mx-auto mt-auto max-w-md">
+            <div class="relative mx-auto mt-auto max-w-md text-center">
               <h2 class="text-4xl font-medium text-black dark:text-white">
                 Get in touch
               </h2>
-              <h3 class="mt-3 leading-relaxed text-zinc-900 dark:text-zinc-200">
-                Looking for a creative partner for your next project? I'm
-                currently available for freelance work and would love to hear
-                about your ideas. Whether you need branding, web design, or
-                print materials, let's collaborate to bring your vision to life.
-              </h3>
-              <form onsubmit="return false;" class="mt-10 w-full space-y-6">
-                <div class="space-y-2">
-                  <label for="name" class="inline-block text-sm font-medium">Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    class="block w-full rounded-lg bg-white border border-white px-5 py-3 leading-6 placeholder-zinc-500 focus:outline-hidden focus:border-purple-500 focus:ring-3 focus:ring-purple-500/50 focus:outline-hidden dark:border-purple-950 dark:bg-purple-950 dark:placeholder-zinc-400 dark:focus:border-purple-500"
-                  />
-                </div>
-                <div class="space-y-2">
-                  <label for="email" class="inline-block text-sm font-medium">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    class="block w-full rounded-lg bg-white border border-white px-5 py-3 leading-6 placeholder-zinc-500 focus:outline-hidden focus:border-purple-500 focus:ring-3 focus:ring-purple-500/50 focus:outline-hidden dark:border-purple-950 dark:bg-purple-950 dark:placeholder-zinc-400 dark:focus:border-purple-500"
-                  />
-                </div>
-                <div class="space-y-2">
-                  <label for="message" class="inline-block text-sm font-medium"
-                    >Message</label
-                  >
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows="6"
-                    class="block w-full rounded-lg bg-white border border-white px-5 py-3 leading-6 placeholder-zinc-500 focus:outline-hidden focus:border-purple-500 focus:ring-3 focus:ring-purple-500/50 focus:outline-hidden dark:border-purple-950 dark:bg-purple-950 dark:placeholder-zinc-400 dark:focus:border-purple-500"
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  class="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-purple-700 bg-purple-700 px-5 py-3 text-sm leading-6 font-semibold text-white hover:border-purple-600 hover:bg-purple-600 hover:text-white focus:ring-3 focus:ring-purple-400/50 active:border-purple-700 active:bg-purple-700 lg:w-auto dark:focus:ring-purple-400/90"
+              <p class="mt-3 leading-relaxed text-zinc-900 dark:text-zinc-200">
+                I'm looking for internship opportunities in design and technology. I'd love to hear from you, whether it's about a role, a project, or just to connect.
+              </p>
+              <div class="mt-10 flex flex-col gap-3 sm:flex-row sm:justify-center">
+                <a
+                  href="mailto:[your email]"
+                  class="inline-flex items-center justify-center rounded-lg border border-purple-700 bg-purple-700 px-5 py-3 text-sm leading-6 font-semibold text-white hover:border-purple-600 hover:bg-purple-600 focus:ring-3 focus:ring-purple-400/50"
                 >
-                  <span>Send Message</span>
-                </button>
-              </form>
+                  Email me
+                </a>
+                <a
+                  href="[LinkedIn URL]"
+                  target="_blank"
+                  class="inline-flex items-center justify-center rounded-lg border border-purple-700 px-5 py-3 text-sm leading-6 font-semibold text-purple-700 hover:bg-purple-700 hover:text-white focus:ring-3 focus:ring-purple-400/50 dark:border-purple-400 dark:text-purple-300"
+                >
+                  LinkedIn
+                </a>
+              </div>
             </div>
           </div>
           <!-- END Contact -->
@@ -512,89 +331,32 @@
           <footer
             class="flex flex-col gap-6 py-7 text-center text-sm md:col-span-12 md:flex-row-reverse md:justify-between md:gap-0 md:text-left"
           >
-            <nav class="flex items-center justify-center gap-4">
+            <nav class="flex items-center justify-center gap-6">
               <a
-                href="javascript:void(0)"
-                class="text-zinc-400 hover:text-zinc-800 dark:hover:text-white"
-              >
-                <svg
-                  class="bi bi-twitter-x inline-block size-5"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 16 16"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="javascript:void(0)"
-                class="text-zinc-400 hover:text-[#1877f2]"
-              >
-                <svg
-                  class="icon-facebook inline-block size-5"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.378 14.192 5 15.115 5H18V0h-3.808C10.596 0 9 1.583 9 4.615V8z"
-                  ></path>
-                </svg>
-              </a>
-              <a
-                href="javascript:void(0)"
-                class="text-zinc-400 hover:text-[#405de6]"
-              >
-                <svg
-                  class="icon-instagram inline-block size-5"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
-                  ></path>
-                </svg>
-              </a>
-              <a
-                href="https://github.com/themewagon/olivia"
-                class="text-zinc-400 hover:text-[#333] dark:hover:text-zinc-50"
+                href="[LinkedIn URL]"
                 target="_blank"
+                class="text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
               >
-                <svg
-                  class="icon-github inline-block size-5"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
-                  ></path>
-                </svg>
+                LinkedIn
               </a>
               <a
-                href="javascript:void(0)"
-                class="text-zinc-400 hover:text-[#ea4c89]"
+                href="https://github.com/elainequ15"
+                target="_blank"
+                class="text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
               >
-                <svg
-                  class="icon-dribbble inline-block size-5"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M12 0C5.372 0 0 5.373 0 12s5.372 12 12 12 12-5.373 12-12S18.628 0 12 0zm9.885 11.441c-2.575-.422-4.943-.445-7.103-.073a42.153 42.153 0 00-.767-1.68c2.31-1 4.165-2.358 5.548-4.082a9.863 9.863 0 012.322 5.835zm-3.842-7.282c-1.205 1.554-2.868 2.783-4.986 3.68a46.287 46.287 0 00-3.488-5.438A9.894 9.894 0 0112 2.087c2.275 0 4.368.779 6.043 2.072zM7.527 3.166a44.59 44.59 0 013.537 5.381c-2.43.715-5.331 1.082-8.684 1.105a9.931 9.931 0 015.147-6.486zM2.087 12l.013-.256c3.849-.005 7.169-.448 9.95-1.322.233.475.456.952.67 1.432-3.38 1.057-6.165 3.222-8.337 6.48A9.865 9.865 0 012.087 12zm3.829 7.81c1.969-3.088 4.482-5.098 7.598-6.027a39.137 39.137 0 012.043 7.46c-3.349 1.291-6.953.666-9.641-1.433zm11.586.43a41.098 41.098 0 00-1.92-6.897c1.876-.265 3.94-.196 6.199.196a9.923 9.923 0 01-4.279 6.701z"
-                  ></path>
-                </svg>
+                GitHub
+              </a>
+              <a
+                href="mailto:[your email]"
+                class="text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+              >
+                Email
               </a>
             </nav>
             <div class="text-zinc-500 dark:text-zinc-400/80">
-              <span class="font-medium">Olivia</span> ©
+              <span class="font-medium">Elaine Qu</span> ©
               <span x-text="new Date().getFullYear()"></span>
-              <p>All right reserved by <a href="https://pixelcave.com/" target="_blank" class="font-bold">Pixelcave</a> • Distributed by <a href="https://themewagon.com" target="_blank" class="font-bold">ThemeWagon</a></p>
+              <p class="text-xs">Template by <a href="https://pixelcave.com/" target="_blank" class="font-medium">Pixelcave</a>, distributed by <a href="https://themewagon.com" target="_blank" class="font-medium">ThemeWagon</a></p>
             </div>
           </footer>
           <!-- END Footer -->
