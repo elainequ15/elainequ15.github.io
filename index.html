@@ -314,15 +314,17 @@
               <h2 class="text-4xl font-medium text-black dark:text-white">
                 Get in touch
               </h2>
-              <p class="mt-3 leading-relaxed text-zinc-900 dark:text-zinc-200">
+              <p class="mt-3 text-left leading-relaxed text-zinc-900 dark:text-zinc-200">
                 I'm looking for internship opportunities in design and technology. I'd love to hear from you, whether it's about a role, a project, or just to connect.
               </p>
               <div class="mt-10 flex flex-col gap-3 sm:flex-row sm:justify-center">
                 <a
                   href="mailto:eyq3@cornell.edu"
+                  x-data="{ copied: false }"
+                  x-on:click="navigator.clipboard?.writeText('eyq3@cornell.edu'); copied = true; setTimeout(() => copied = false, 2000)"
                   class="inline-flex items-center justify-center rounded-lg border border-purple-700 bg-purple-700 px-5 py-3 text-sm leading-6 font-semibold text-white hover:border-purple-600 hover:bg-purple-600 focus:ring-3 focus:ring-purple-400/50"
                 >
-                  Email me
+                  <span x-text="copied ? 'Email copied!' : 'Email me'">Email me</span>
                 </a>
                 <a
                   href="https://www.linkedin.com/in/elaineyilinqu"
@@ -332,6 +334,10 @@
                   LinkedIn
                 </a>
               </div>
+              <p class="mt-4 text-sm text-zinc-700 dark:text-zinc-300">
+                Or email me directly at
+                <a href="mailto:eyq3@cornell.edu" class="font-medium text-purple-700 underline underline-offset-4 hover:text-purple-600 dark:text-purple-300">eyq3@cornell.edu</a>
+              </p>
             </div>
           </div>
           <!-- END Contact -->
