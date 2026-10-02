@@ -66,22 +66,38 @@
         </div>
         <!-- END Hero -->
 
-        <div class="mt-6 overflow-hidden rounded-xl bg-zinc-100 p-4 md:p-8 dark:bg-zinc-900">
-          <div class="mx-auto max-h-[640px] max-w-2xl overflow-y-auto rounded-lg shadow-sm">
-            <img src="assets/peer-review-full.png" alt="Full Figma design of the redesigned CUAir peer review form" class="w-full" />
+        <!-- Before and After -->
+        <div class="mt-6 rounded-xl bg-zinc-100 p-4 md:p-8 dark:bg-zinc-900">
+          <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+          <figure class="flex flex-col">
+            <figcaption class="mb-3">
+              <p class="text-sm font-medium text-black dark:text-white">Before</p>
+              <p class="text-xs text-zinc-600 dark:text-zinc-400">The current Google Form (names blurred for privacy)</p>
+            </figcaption>
+            <div class="max-h-[640px] overflow-y-auto rounded-lg bg-white shadow-sm ring-1 ring-zinc-200 dark:ring-zinc-700">
+              <img src="assets/peer-review-old.png" alt="The original CUAir peer review Google Form, with team member names blurred" class="w-full" />
+            </div>
+          </figure>
+          <figure class="flex flex-col">
+            <figcaption class="mb-3">
+              <p class="text-sm font-medium text-black dark:text-white">After</p>
+              <p class="text-xs text-zinc-600 dark:text-zinc-400">My redesign in Figma</p>
+            </figcaption>
+            <div class="max-h-[640px] overflow-y-auto rounded-lg bg-white shadow-sm ring-1 ring-zinc-200 dark:ring-zinc-700">
+              <img src="assets/peer-review-full.png" alt="Full Figma design of the redesigned CUAir peer review form" class="w-full" />
+            </div>
+          </figure>
           </div>
-          <p class="mt-3 text-center text-xs text-zinc-500 dark:text-zinc-400">Scroll to see the full form</p>
+          <p class="mt-4 text-center text-xs text-zinc-500 dark:text-zinc-400">Scroll inside each box to see the full form</p>
         </div>
+        <!-- END Before and After -->
 
         <!-- Case Study -->
         <div class="mt-16 flex flex-col gap-16">
           <section class="grid grid-cols-1 gap-4 md:grid-cols-12">
             <h2 class="text-2xl font-medium text-black md:col-span-4 dark:text-white">The problem</h2>
             <div class="flex flex-col gap-4 md:col-span-8">
-              <p class="leading-relaxed text-zinc-700 dark:text-zinc-300">At the end of each semester, CUAir members reflect on how their peers have performed. The current platform for this is what I set out to improve.</p><p class="rounded-lg border-2 border-dashed border-purple-300 p-4 text-sm text-purple-700 dark:border-purple-500/50 dark:text-purple-300">TODO: What was frustrating or slow about the old platform? Add a screenshot of the old version if you can.</p><div class="flex aspect-video w-full items-center justify-center rounded-xl border-2 border-dashed border-zinc-300 bg-zinc-50 p-6 text-center text-sm text-zinc-500 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-400">
-              <!-- Replace this div with: <img src="assets/peer-review-before.png" alt="Old platform" class="w-full rounded-xl" /> -->
-              Image: Old platform<br />(assets/peer-review-before.png)
-            </div>
+              <p class="leading-relaxed text-zinc-700 dark:text-zinc-300">At the end of each semester, CUAir members reflect on how their peers have performed. The current platform for this is what I set out to improve.</p><p class="rounded-lg border-2 border-dashed border-purple-300 p-4 text-sm text-purple-700 dark:border-purple-500/50 dark:text-purple-300">TODO: What was frustrating or slow about the old platform?</p>
             </div>
           </section>
           <section class="grid grid-cols-1 gap-4 md:grid-cols-12">
