@@ -1,6 +1,12 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth dark">
   <head>
+    <script>
+      // Dark by default, remember the visitor's choice across pages
+      try {
+        if (localStorage.getItem('theme') === 'light') document.documentElement.classList.remove('dark');
+      } catch (e) {}
+    </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>Peer Review Platform Redesign | Elaine Qu</title>
@@ -8,11 +14,14 @@
     <meta name="author" content="Elaine Qu" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%237e22ce'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='18' font-weight='700' fill='white' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.bunny.net" />
-    <link href="https://fonts.bunny.net/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.bunny.net/css2?family=DM+Sans:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <style type="text/tailwindcss">
       @custom-variant dark (&:where(.dark, .dark *));
-      @theme { --default-font-family: "Inter"; }
+      @theme {
+        --default-font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+        --font-display: "Instrument Serif", Georgia, serif;
+      }
     </style>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <style>[x-cloak] { display: none !important; }</style>
@@ -20,11 +29,11 @@
   <body class="antialiased">
     <div
       x-data="{
-        darkMode: false,
+        darkMode: document.documentElement.classList.contains('dark'),
         toggleDarkMode() {
           this.darkMode = ! this.darkMode;
-          if (this.darkMode) { document.body.parentNode.classList.add('dark'); }
-          else { document.body.parentNode.classList.remove('dark'); }
+          document.documentElement.classList.toggle('dark', this.darkMode);
+          try { localStorage.setItem('theme', this.darkMode ? 'dark' : 'light'); } catch (e) {}
         }
       }"
       class="min-h-dvh min-w-80 bg-white text-zinc-800 dark:bg-zinc-950 dark:text-zinc-100"
@@ -33,7 +42,7 @@
         <!-- Main Header -->
         <header class="flex flex-none items-center justify-between py-7">
           <div class="flex items-center gap-2">
-            <a href="index.html" class="text-2xl font-thin tracking-widest hover:text-purple-600 active:opacity-75 dark:hover:text-purple-400">Elaine</a>
+            <a href="index.html" class="font-display text-3xl tracking-wide hover:text-purple-600 active:opacity-75 dark:hover:text-purple-400">Elaine</a>
             <button x-on:click="toggleDarkMode()" type="button" aria-label="Toggle dark mode" class="relative inline-flex size-9 items-center justify-center text-zinc-600 hover:opacity-75 dark:text-zinc-400">
               <div x-cloak x-show="!darkMode" x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0 rotate-180" x-transition:enter-end="opacity-100 rotate-0" x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100 rotate-0" x-transition:leave-end="opacity-0 rotate-180" class="absolute inset-0 flex items-center justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="inline-block size-5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" /></svg>
@@ -54,12 +63,12 @@
 
         <!-- Hero -->
         <div class="relative overflow-hidden rounded-xl bg-zinc-100 p-8 md:p-12 dark:bg-zinc-900">
-          <div aria-hidden="true" class="absolute -top-20 -left-20 size-48 rounded-full bg-pink-300 blur-2xl"></div>
-          <div aria-hidden="true" class="absolute -top-10 -right-10 size-64 rounded-full bg-purple-300 blur-3xl"></div>
+          <div aria-hidden="true" class="absolute -top-20 -left-20 size-48 rounded-full bg-purple-300 blur-2xl"></div>
+          <div aria-hidden="true" class="absolute -top-10 -right-10 size-64 rounded-full bg-violet-200 blur-3xl"></div>
           <div aria-hidden="true" class="absolute inset-0 bg-purple-100/50 dark:bg-purple-900/75 backdrop-blur-md"></div>
           <div class="relative">
             <h4 class="text-sm text-zinc-700 dark:text-zinc-300">Cornell Unmanned Air Systems</h4>
-            <h1 class="mt-2 text-4xl font-medium text-black dark:text-white">Peer Review Platform Redesign</h1>
+            <h1 class="mt-2 font-display text-5xl leading-tight font-normal text-black dark:text-white">Peer Review Platform Redesign</h1>
             <p class="mt-3 max-w-2xl leading-relaxed text-zinc-900 dark:text-zinc-200">Redesigning our team's end of semester peer review platform in Figma, based on feedback I gathered from team members.</p>
             <dl class="mt-8 grid grid-cols-2 gap-6 md:grid-cols-4"><div><dt class="text-xs font-medium text-zinc-600 dark:text-zinc-400">Role</dt><dd class="mt-1 text-sm font-medium text-zinc-900 dark:text-zinc-100">Leading the redesign</dd></div><div><dt class="text-xs font-medium text-zinc-600 dark:text-zinc-400">Timeline</dt><dd class="mt-1 text-sm font-medium text-zinc-900 dark:text-zinc-100">Aug 2026 to present</dd></div><div><dt class="text-xs font-medium text-zinc-600 dark:text-zinc-400">Tools</dt><dd class="mt-1 text-sm font-medium text-zinc-900 dark:text-zinc-100">Figma</dd></div><div><dt class="text-xs font-medium text-zinc-600 dark:text-zinc-400">Status</dt><dd class="mt-1 text-sm font-medium text-zinc-900 dark:text-zinc-100">In progress</dd></div></dl>
           </div>
@@ -95,30 +104,39 @@
         <!-- Case Study -->
         <div class="mt-16 flex flex-col gap-16">
           <section class="grid grid-cols-1 gap-4 md:grid-cols-12">
-            <h2 class="text-2xl font-medium text-black md:col-span-4 dark:text-white">The Problem</h2>
+            <h2 class="font-display text-4xl font-normal text-black md:col-span-4 dark:text-white">The problem</h2>
             <div class="flex flex-col gap-4 md:col-span-8">
-              <p class="leading-relaxed text-zinc-700 dark:text-zinc-300">At the end of each semester, CUAir members reflect on how their peers have performed. The current platform for this is what I set out to improve.</p><p class="rounded-lg border-2 border-dashed border-purple-300 p-4 text-sm text-purple-700 dark:border-purple-500/50 dark:text-purple-300">TODO: What was frustrating or slow about the old platform?</p>
+              <p class="leading-relaxed text-zinc-700 dark:text-zinc-300">At the end of each semester, CUAir members reflect on how their peers have performed. Right now that happens through a Google Form, and every member fills it out once for each person they review.</p>
+              <p class="leading-relaxed text-zinc-700 dark:text-zinc-300">The form works, but it isn't built for the job. All of the rules (anonymity, who you need to review, why your email is collected) sit in one block of text at the top that most people skim past. Finding the person you're reviewing means scrolling through a long list of names, and there's no way to check who you've already reviewed or how many reviews you have left.</p>
             </div>
           </section>
           <section class="grid grid-cols-1 gap-4 md:grid-cols-12">
-            <h2 class="text-2xl font-medium text-black md:col-span-4 dark:text-white">Research</h2>
+            <h2 class="font-display text-4xl font-normal text-black md:col-span-4 dark:text-white">Research</h2>
             <div class="flex flex-col gap-4 md:col-span-8">
-              <p class="leading-relaxed text-zinc-700 dark:text-zinc-300">Before designing anything, I gathered feedback from team members on the current platform.</p><p class="rounded-lg border-2 border-dashed border-purple-300 p-4 text-sm text-purple-700 dark:border-purple-500/50 dark:text-purple-300">TODO: How did you collect feedback (survey, interviews)? How many people? List the top 2 or 3 things you heard.</p>
+              <p class="leading-relaxed text-zinc-700 dark:text-zinc-300">Before designing anything, I audited every question and instruction in the current form. Then I gathered feedback from 22 team members through a mix of a survey and casual conversations.</p>
+              <p class="leading-relaxed text-zinc-700 dark:text-zinc-300">A few complaints came up again and again:</p>
+              <ul class="list-disc space-y-2 pl-6 leading-relaxed text-zinc-700 dark:text-zinc-300">
+                <li>The instructions were walls of text that nobody wanted to read.</li>
+                <li>There was way too much scrolling, especially through every member's name to find the one person they were reviewing.</li>
+                <li>There was no home hub to see who they'd already reviewed or how many more were required.</li>
+                <li>Responding just felt unappealing.</li>
+              </ul>
             </div>
           </section>
           <section class="grid grid-cols-1 gap-4 md:grid-cols-12">
-            <h2 class="text-2xl font-medium text-black md:col-span-4 dark:text-white">Design Process</h2>
+            <h2 class="font-display text-4xl font-normal text-black md:col-span-4 dark:text-white">Design process</h2>
             <div class="flex flex-col gap-4 md:col-span-8">
-              <p class="rounded-lg border-2 border-dashed border-purple-300 p-4 text-sm text-purple-700 dark:border-purple-500/50 dark:text-purple-300">TODO: Walk through how your design evolved: early sketches or wireframes, what you changed and why.</p><div class="flex aspect-video w-full items-center justify-center rounded-xl border-2 border-dashed border-zinc-300 bg-zinc-50 p-6 text-center text-sm text-zinc-500 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-400">
-              <!-- Replace this div with: <img src="assets/peer-review-wireframes.png" alt="Wireframes or early iterations" class="w-full rounded-xl" /> -->
-              Image: Wireframes or early iterations<br />(assets/peer-review-wireframes.png)
-            </div>
+              <p class="leading-relaxed text-zinc-700 dark:text-zinc-300">I started with a plain skeleton layout covering the full flow: a welcome screen, the form, and a confirmation screen. I fixed structure and spacing before adding any styling, then kept iterating on that same file, so the final design is the accumulation of every round of changes.</p>
+              <p class="leading-relaxed text-zinc-700 dark:text-zinc-300">One teammate's complaint about scrolling to find specific names and NetIDs led to one of my biggest changes. I replaced the long list with searchable dropdown menus that already pair each member with their NetID, so you can type a name and pick the right person in seconds.</p>
+              <p class="leading-relaxed text-zinc-700 dark:text-zinc-300">I also restructured the form into one card per topic. Each card pairs the rating with its own feedback box, so a reviewer finishes one full thought before moving on to the next.</p>
+              <p class="leading-relaxed text-zinc-700 dark:text-zinc-300">From there I refined the details. A divider and heading split reviewer info from the feedback section. Since every field is required, I replaced asterisks on every question with a single "All fields are required" note. I kept the layout left aligned, including the Submit button, so the eye follows one clean edge down the page.</p>
             </div>
           </section>
           <section class="grid grid-cols-1 gap-4 md:grid-cols-12">
-            <h2 class="text-2xl font-medium text-black md:col-span-4 dark:text-white">Outcome</h2>
+            <h2 class="font-display text-4xl font-normal text-black md:col-span-4 dark:text-white">Outcome</h2>
             <div class="flex flex-col gap-4 md:col-span-8">
-              <p class="rounded-lg border-2 border-dashed border-purple-300 p-4 text-sm text-purple-700 dark:border-purple-500/50 dark:text-purple-300">TODO: What does the new design do better? If it's still in progress, say what's next (testing with members, handing off to software).</p>
+              <p class="leading-relaxed text-zinc-700 dark:text-zinc-300">The new form is easier to scan and easier to finish. Ratings and feedback live together, the hierarchy makes each section clear, and the visual style matches CUAir's branding.</p>
+              <p class="leading-relaxed text-zinc-700 dark:text-zinc-300">Next, I'm moving each rule from the old intro to the spot where it matters, like explaining why email is collected right under the Email field. I'm also designing a home hub where members can track who they've reviewed and how many are left, plus error states and the results view where members see their feedback. The goal is to integrate everything into CUAir's internal platform.</p>
             </div>
           </section>
         </div>
@@ -128,7 +146,7 @@
         <a href="bethel-grove.html" class="mt-16 flex items-center justify-between rounded-xl bg-zinc-100 p-8 hover:bg-zinc-200 dark:bg-zinc-900 dark:hover:bg-zinc-800">
           <div>
             <p class="text-sm text-zinc-600 dark:text-zinc-400">Next project</p>
-            <p class="mt-1 text-xl font-medium text-black dark:text-white">Social Media Graphics</p>
+            <p class="mt-1 font-display text-3xl text-black dark:text-white">Social Media Graphics</p>
           </div>
           <span class="text-2xl text-purple-700 dark:text-purple-400">→</span>
         </a>
